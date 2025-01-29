@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" sizes="32x32" href="./public/logo.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fishing Adventures®</title>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+  <meta name="description"
+    content="Premium fishing adventures and charters. Book your next fishing trip with expert guides and top equipment." />
+  <title>Fishing Adventures® - Premium Fishing Charters & Experiences</title>
+
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" as="style" />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="./public/v1.mp4" as="video" type="video/mp4" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" media="print"
+    onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print"
+    onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    media="print" onload="this.media='all'" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <div id="loader">
-    <h3>Your Next </h3>
-    <h3>Fishing </h3>
+  <div id="loader" aria-label="Loading animation">
+    <h3>Your Next</h3>
+    <h3>Fishing</h3>
     <h3>Adventure®</h3>
   </div>
 
   <main id="main">
     <div id="page1">
-      <div id="cursor">
-        <h5>Gone Fishing</h5>
+      <div id="cursor" role="presentation">
+        <h5>Catch Fish</h5>
       </div>
-      <video autoplay loop muted src="./public/v1.mp4"></video>
+      <video autoplay loop muted playsinline src="./public/v1.mp4" aria-label="Background fishing video"></video>
       <div id="page1-1">
         <div class="menupagediv">
           <div class="menuTop">
             <div class="mTopleft">
-              <h3>fishing</h3>
-              <video autoplay loop muted
-                src="./public//v2.mp4"></video>
+              <h3>Gone Fishing</h3>
+              <video autoplay loop muted playsinline src="./public/v2.mp4" aria-label="Featured fishing clip"></video>
               <div class="vdText">
-                <h2><i class="ri-play-circle-fill"></i>fishing adventure</h2>
+                <h2><i class="ri-play-circle-fill" aria-hidden="true"></i>Watch Our Adventures</h2>
                 <h4>—01:18</h4>
               </div>
             </div>
@@ -40,22 +51,22 @@
               <a href="#">Home</a>
               <a href="#">Fishing Spots</a>
               <a href="#">Equipment & Gear</a>
-              <a href="#">Fish Species</a>
+              <a href="#">Pricing</a>
               <a href="#">Contact</a>
-              <button class="mbtn">Find Fishing Spots</button>
+              <button class="mbtn">Book Now</button>
             </div>
           </div>
           <div class="menubtm">
-            <h3>Tomorrow's Brands, Today.<sup>TM</sup></h3>
+            <h3>Expert Guides, Unforgettable Adventures<sup>TM</sup></h3>
             <div class="btmright undline">
-              <a href="#"><i class="ri-arrow-right-up-line"></i>X</a>
-              <a href="#"><i class="ri-arrow-right-up-line"></i>Instagram</a>
-              <a href="#"><i class="ri-arrow-right-up-line"></i>LinkedIn</a>
+              <a href="#" aria-label="Facebook"><i class="ri-arrow-right-up-line" aria-hidden="true"></i>Facebook</a>
+              <a href="#" aria-label="Instagram"><i class="ri-arrow-right-up-line" aria-hidden="true"></i>Instagram</a>
+              <a href="#" aria-label="YouTube"><i class="ri-arrow-right-up-line" aria-hidden="true"></i>YouTube</a>
             </div>
           </div>
         </div>
         <nav>
-          <h3>Discover Your Next Adventure.</h3>
+          <h3>Your Next Great Catch Awaits</h3>
           <h4 id="menuToggle" class="hoverLink white undline">Menu</h4>
         </nav>
         <h1>
@@ -68,29 +79,28 @@
       <div id="page2-1">
         <div>
           <div class="elem">
-            <h4>Expert Fishing Charters.</h4>
+            <h4>Professional Fishing Guides.</h4>
           </div>
           <div class="elem">
-            <h4>Memorable Catches™</h4>
+            <h4>Guaranteed Success™</h4>
           </div>
         </div>
         <div class="elem">
-          <h3>Paris / San Diego</h3>
+          <h3>Worldwide Locations</h3>
         </div>
       </div>
       <div id="page2-line" class="elem"></div>
       <div id="page2-2">
         <h2>
-          Join our seasoned fishing captains for the adventure of a lifetime. From 
-          inshore fishing to offshore expeditions, we offer customized trips for anglers 
-          of all skill levels. Our local knowledge and top-notch equipment ensure you'll 
-          have the best chance at landing that trophy fish.
+          Experience world-class fishing with our expert guides. Whether you're a beginner or seasoned angler,
+          we provide personalized adventures tailored to your skill level. Using top-quality gear and local knowledge,
+          we'll help you land the catch of a lifetime.
         </h2>
       </div>
       <div id="page2-3">
-        <div id="small">Charter Options <span>Available</span><i>↵</i></div>
-        <h2>Explore our fishing</h2>
-        <h2>trips and locations</h2>
+        <div id="small">Premium Packages <span>Available</span><i>↵</i></div>
+        <h2>Discover our exclusive</h2>
+        <h2>fishing experiences</h2>
       </div>
     </div>
 
@@ -98,24 +108,18 @@
       <div id="page3-0"></div>
       <div id="page3-1">
         <div class="box">
-          <img class="textimg firtstext"
-            src="./public/f1.png"
-            alt="">
-          <img src="./public/i3.jpg" alt="Work 1">
+          <img class="textimg firtstext" src="./public/f1.png" alt="Deep Sea Fishing">
+          <img src="./public/i3.jpg" alt="Deep Sea Adventure">
           <video autoplay loop muted src="./public/v3.mp4"></video>
         </div>
         <div class="box">
-          <img class="textimg"
-          src="./public/f2.png"
-          alt="">
-          <img src="./public/i2.jpg" alt="Work 2">
+          <img class="textimg" src="./public/f2.png" alt="Coastal Fishing">
+          <img src="./public/i2.jpg" alt="Coastal Experience">
           <video autoplay loop muted src="./public/v2.mp4"></video>
         </div>
         <div class="box">
-          <img class="textimg"
-          src="./public/f3.png"
-          alt="">
-         <img src="./public/i1.jpg" alt="Work 3">
+          <img class="textimg" src="./public/f3.png" alt="Lake Fishing">
+          <img src="./public/i1.jpg" alt="Lake Adventure">
           <video autoplay loop muted src="./public/v1.mp4"></video>
         </div>
       </div>
@@ -124,36 +128,50 @@
     <div id="page4">
       <div id="page4-1">
         <div class="page4-left">
-          <h1>Find Your Perfect<br>Fishing Spot</h1>
-          <p>Discover prime fishing locations near you. From serene lakes to coastal hotspots, we'll help you find the perfect spot for your next catch.</p>
+          <h1>Discover Prime<br>Fishing Locations</h1>
+          <p>Access exclusive fishing spots curated by local experts. From hidden coves to deep-sea hotspots, find your
+            perfect fishing destination.</p>
           <div class="search-container">
-            <input type="text" placeholder="Enter your location">
-            <button>Search Spots</button>
+            <div class="search-box">
+              <i class="ri-map-pin-line"></i>
+              <input type="text" placeholder="Enter your location">
+              <button>Find Spots</button>
+            </div>
           </div>
           <div class="spot-features">
             <div class="feature">
-              
-              <span>Location Based Search</span>
+              <i class="ri-map-pin-2-line"></i>
+              <span>GPS Navigation</span>
             </div>
             <div class="feature">
-              
-              <span>Real-time Updates</span>
+              <i class="ri-refresh-line"></i>
+              <span>Weather Updates</span>
             </div>
             <div class="feature">
-              
-              <span>Detailed Reports</span>
+              <i class="ri-compass-3-line"></i>
+              <span>Fish Species Guide</span>
+            </div>
+          </div>
+          <div class="spot-stats">
+            <div class="stat">
+              <h3>1000+</h3>
+              <p>Premium Spots</p>
+            </div>
+            <div class="stat">
+              <h3>24/7</h3>
+              <p>Expert Support</p>
+            </div>
+            <div class="stat">
+              <h3>5.0★</h3>
+              <p>Rating</p>
             </div>
           </div>
         </div>
         <div class="page4-right">
           <div class="map-container">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d387193.30596073663!2d-74.25986548248784!3d40.69714941680122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1635786889174!5m2!1sen!2sus" 
-              width="100%" 
-              height="100%" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d387193.30596073663!2d-74.25986548248784!3d40.69714941680122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1635786889174!5m2!1sen!2sus"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
           </div>
         </div>
@@ -163,14 +181,16 @@
     <div id="page5">
       <div class="wave-bg">
         <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-          <path fill="#50b0ff" fill-opacity="0.2" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          <path fill="#50b0ff" fill-opacity="0.2"
+            d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+          </path>
         </svg>
       </div>
-      
+
       <div id="page5-1">
         <div class="booking-header">
-          <h1>Book Your Dream Fishing Adventure</h1>
-          <p>Choose from our carefully curated experiences and embark on an unforgettable journey</p>
+          <h1>Premium Fishing Packages</h1>
+          <p>Select from our expertly crafted fishing experiences designed for maximum enjoyment and success</p>
         </div>
 
         <div class="booking-cards">
@@ -180,12 +200,12 @@
               <div class="package-tag">Most Popular</div>
             </div>
             <div class="package-content">
-              <h3>Coastal Adventure</h3>
-              <p>Perfect for beginners and families</p>
+              <h3>Coastal Explorer</h3>
+              <p>Perfect for families and beginners</p>
               <ul>
                 <li><i class="ri-time-line"></i> 4 Hours</li>
                 <li><i class="ri-group-line"></i> Up to 6 people</li>
-                <li><i class="ri-ship-line"></i> Equipment included</li>
+                <li><i class="ri-ship-line"></i> All gear included</li>
               </ul>
               <div class="package-price">
                 <span>From</span>
@@ -200,12 +220,12 @@
               <div class="package-tag">Premium</div>
             </div>
             <div class="package-content">
-              <h3>Deep Sea Expedition</h3>
-              <p>For the ultimate fishing experience</p>
+              <h3>Deep Sea Master</h3>
+              <p>Ultimate offshore experience</p>
               <ul>
                 <li><i class="ri-time-line"></i> 8 Hours</li>
                 <li><i class="ri-group-line"></i> Up to 4 people</li>
-                <li><i class="ri-ship-line"></i> Full service included</li>
+                <li><i class="ri-ship-line"></i> Premium service</li>
               </ul>
               <div class="package-price">
                 <span>From</span>
@@ -217,15 +237,15 @@
           <div class="package-card">
             <div class="package-image">
               <img src="./public/i4.jpg" alt="Sunset Fishing">
-              <div class="package-tag">Romantic</div>
+              <div class="package-tag">Exclusive</div>
             </div>
             <div class="package-content">
-              <h3>Sunset Special</h3>
-              <p>Perfect for couples</p>
+              <h3>Sunset Serenity</h3>
+              <p>Romantic evening adventure</p>
               <ul>
                 <li><i class="ri-time-line"></i> 6 Hours</li>
                 <li><i class="ri-group-line"></i> 2 people</li>
-                <li><i class="ri-ship-line"></i> Dinner included</li>
+                <li><i class="ri-ship-line"></i> Gourmet dinner</li>
               </ul>
               <div class="package-price">
                 <span>From</span>
@@ -237,44 +257,44 @@
 
         <div class="booking-form-container">
           <div class="form-left">
-            <h2>Ready to Book?</h2>
-            <p>Fill out the form and we'll get back to you within 24 hours</p>
+            <h2>Book Your Adventure</h2>
+            <p>Reserve your spot today for an unforgettable fishing experience</p>
             <div class="testimonial">
-              <p>"An incredible experience! The crew was amazing and we caught so many fish!"</p>
+              <p>"Incredible experience! Professional crew and amazing fishing spots. Will definitely return!"</p>
               <div class="testimonial-author">
-                <img src="https://img.freepik.com/premium-photo/portrait-man-wearing-sunglasses_1048944-17934341.jpg?semt=ais_hybrid" alt="Customer">
+                <img src="./public/testimonial.jpg" alt="Happy Customer">
                 <div>
-                  <h4>Kapil Sodhi</h4>
-                  <span>Recent Guest</span>
+                  <h4>Rahul Sharma</h4>
+                  <span>Verified Customer</span>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <form class="booking-form">
             <div class="form-row">
               <div class="form-group">
                 <label>Full Name</label>
-                <input type="text" placeholder="Enter your name">
+                <input type="text" placeholder="Enter your name" required>
               </div>
               <div class="form-group">
                 <label>Email Address</label>
-                <input type="email" placeholder="Enter your email">
+                <input type="email" placeholder="Enter your email" required>
               </div>
             </div>
-            
+
             <div class="form-row">
               <div class="form-group">
                 <label>Preferred Date</label>
-                <input type="date">
+                <input type="date" required>
               </div>
               <div class="form-group">
                 <label>Package Type</label>
-                <select>
+                <select required>
                   <option value="">Select Package</option>
-                  <option value="coastal">Coastal Adventure</option>
-                  <option value="deep-sea">Deep Sea Expedition</option>
-                  <option value="sunset">Sunset Special</option>
+                  <option value="coastal">Coastal Explorer</option>
+                  <option value="deep-sea">Deep Sea Master</option>
+                  <option value="sunset">Sunset Serenity</option>
                 </select>
               </div>
             </div>
@@ -284,39 +304,93 @@
               <textarea placeholder="Any special requirements or questions?"></textarea>
             </div>
 
-            <button type="submit">Book Your Adventure Now</button>
+            <button type="submit">Secure Your Spot Now</button>
           </form>
         </div>
       </div>
     </div>
 
-    <footer class="pageFooter">
+    <div id="page6">
+      <div id="page6-1">
+        <div>
+          <div class="elem">
+            <h4>Professional Equipment.</h4>
+          </div>
+          <div class="elem">
+            <h4>Maximum Results™</h4>
+          </div>
+        </div>
+        <div class="elem">
+          <h3>Premium Gear</h3>
+        </div>
+      </div>
+      <div id="page6-line" class="elem"></div>
+      <div id="page6-2">
+        <h2>
+          Experience fishing with the finest equipment available. We maintain an extensive collection of premium rods,
+          reels, and tackle from world-renowned brands. Our gear is regularly serviced and updated to ensure you have
+          the best tools for a successful fishing adventure.
+        </h2>
+      </div>
+      <div id="page6-3">
+        <div id="small">View Equipment <span>Details</span><i>↵</i></div>
+        <h2>Explore our premium</h2>
+        <h2>fishing equipment</h2>
+      </div>
+    </div>
+
+    <div id="page7">
+      <div class="equipment-showcase">
+        <div class="equipment-category">
+          <img src="./public/i7.jpg" alt="Premium Fishing Gear">
+          <video autoplay loop muted src="./public/v3.mp4"></video>
+          <h3>Professional Grade Gear</h3>
+          <p>Top-tier rods and reels from Shimano, Penn, and Daiwa</p>
+        </div>
+
+        <div class="equipment-category">
+          <img src="./public/i10.jpg" alt="Fishing Accessories">
+          <video autoplay loop muted src="./public/v3.mp4"></video>
+          <h3>Expert-Selected Tackle</h3>
+          <p>Premium lures and bait for every fishing situation</p>
+        </div>
+
+        <div class="equipment-category">
+          <img src="./public/i9.jpg" alt="Safety Equipment">
+          <video autoplay loop muted src="./public/v1.mp4"></video>
+          <h3>Complete Safety Kit</h3>
+          <p>Modern safety equipment for worry-free adventures</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="pageFooter" id="foot">
       <div class="footertop">
         <div class="ftleft">
-          <h3>Cast Your Next Adventure</h3>
-          <a href="#">Find Next Spot</a>
+          <h3>Start Your Fishing Journey</h3>
+          <a href="#page5">Book Now</a>
         </div>
         <div class="ftright undline">
           <div class="rl">
-            <a href="#">Home</a>
-            <a href="#">Charters</a>
-            <a href="#">About</a>
-            <a href="#">Fishing Spots</a>
-            <a href="#">Contact</a>
+            <a href="#page1">Home</a>
+            <a href="#page4">Locations</a>
+            <a href="#page6">Equipment</a>
+            <a href="#page5">Packages</a>
+            <a href="#foot">Contact</a>
           </div>
           <div class="rr">
-            <a href="#">X<i class="ri-arrow-right-up-line"></i></a>
+            <a href="#">Facebook<i class="ri-arrow-right-up-line"></i></a>
             <a href="#">Instagram<i class="ri-arrow-right-up-line"></i></a>
-            <a href="#">LinkedIn<i class="ri-arrow-right-up-line"></i></a>
+            <a href="#">YouTube<i class="ri-arrow-right-up-line"></i></a>
           </div>
         </div>
       </div>
       <div class="footerbottom">
         <div class="ftt">
-          <h2>Deep Sea Adventures<br>Coastal Excursions</h2>
+          <h2>Professional Guides<br>Unforgettable Adventures</h2>
           <div class="fttleft undline">
-            <a href="#">info@fishingadventures.com</a>
-            <h3>&copy; 2025 Fishing Adventures</h3>
+            <a href="mailto:contact@fishingadventures.com">contact@fishingadventures.com</a>
+            <h3>&copy; 2024 Fishing Adventures® All Rights Reserved</h3>
           </div>
         </div>
         <div class="ftb">
@@ -340,4 +414,5 @@
   <script src="./main.js"></script>
 
 </body>
+
 </html>

@@ -4,29 +4,38 @@ function locoMotiveScroll() {
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
+    multiplier: 0.8,
+    lerp: 0.05
   });
+
   locoScroll.on("scroll", ScrollTrigger.update);
 
   ScrollTrigger.scrollerProxy("#main", {
     scrollTop(value) {
-      return arguments.length
-        ? locoScroll.scrollTo(value, 0, 0)
-        : locoScroll.scroll.instance.scroll.y;
+      return arguments.length ? locoScroll.scrollTo(value, { duration: 0 }) : locoScroll.scroll.instance.scroll.y;
     },
     getBoundingClientRect() {
       return {
         top: 0,
         left: 0,
         width: window.innerWidth,
-        height: window.innerHeight,
+        height: window.innerHeight
       };
     },
-    pinType: document.querySelector("#main").style.transform
-      ? "transform"
-      : "fixed",
+    pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
   });
 
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+  ScrollTrigger.defaults({ scroller: "#main" });
+
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      locoScroll.update();
+      ScrollTrigger.refresh();
+    }, 150);
+  });
 
   ScrollTrigger.refresh();
 }
@@ -93,12 +102,13 @@ function menuToggle() {
 function menutextAnimation() {
   var inTime = gsap.timeline();
   inTime.from(".menuTop .mTopRight a", {
-    y: -300,
+    opacity: 0,
+    x: 500,
     stagger: 0.2,
   });
   inTime.from(".menubtm h3, .btmright a", {
     y: 100,
-    stagger: 0.2,
+    stagger: 0.1,
   });
 }
 
@@ -109,7 +119,7 @@ function page2ani() {
     duration: 1,
     scrollTrigger: {
       trigger: "#page2",
-      scroller: "#main", 
+      scroller: "#main",
       start: "top 47%",
       end: "top 46%",
       scrub: 2,
@@ -149,21 +159,19 @@ function gsapTimeline() {
   const tl = gsap.timeline();
 
   tl.from("#loader h3", {
-    x: 40,
+    y: 20,
     opacity: 0,
-    duration: 1,
-    stagger: 0.1
+    duration: 0.5,
+    stagger: 0.2
   })
 
   tl.to("#loader h3", {
     opacity: 0,
-    x: -20,
     duration: 1,
-    stagger: -0.1
   })
 
   tl.to("#loader", {
-    opacity: 0
+    opacity: 0,
   })
 
   tl.to("#loader", {
@@ -181,6 +189,7 @@ function gsapTimeline() {
   })
 
   tl.from("#page1-1 h1 span", {
+    y: 50,
     opacity: 0,
     delay: 0.2,
     y: 120,
@@ -198,44 +207,25 @@ function gsapTimeline() {
 
 function page3Animation() {
   gsap.from("#page3-1 .box", {
-    y: 400,
-    duration: 0.4,
+    y: 150,
+    duration: 1,
+    stagger: 0.1,
+    ease: "power2.out",
     scrollTrigger: {
       trigger: "#page3",
       scroller: "#main",
-      start: "top 50%",
-      end: "top 46%",
-      scrub: 3,
+      start: "top 70%",
+      end: "top 30%",
+      scrub: 1,
+      markers: false
     },
   });
 }
 
 function page4Animation() {
   const page4Items = document.querySelectorAll("#page4-1 .page4-left h1, #page4-1 .page4-left p, #page4-1 .search-container, #page4-1 .spot-features");
-  
+
   let hoveredItem = null;
-
-  page4Items.forEach((item, index) => {
-    item.addEventListener("mouseenter", () => {
-      hoveredItem = index;
-      
-      gsap.to(item, {
-        scale: 1.05,
-        duration: 0.4,
-        ease: "power2.out"
-      });
-    });
-
-    item.addEventListener("mouseleave", () => {
-      hoveredItem = null;
-      
-      gsap.to(item, {
-        scale: 1,
-        duration: 0.4,
-        ease: "power2.in"
-      });
-    });
-  });
 
   gsap.set("#page4-1", {
     opacity: 1,
@@ -244,18 +234,6 @@ function page4Animation() {
 }
 
 function page5Animation() {
-  gsap.from("#page5-1 h1", {
-    y: 100,
-    duration: 0.4,
-    scrollTrigger: {
-      trigger: "#page5",
-      scroller: "#main",
-      start: "top 60%",
-      end: "top 54%",
-      scrub: 3,
-    },
-  });
-
   gsap.from("#page5 .circleText", {
     y: 320,
     stagger: 0.2,
@@ -298,6 +276,66 @@ function page5Bottom() {
   });
 }
 
+function page6Animation() {
+  gsap.from("#page6-2 h2", {
+    y: 140,
+    stagger: 0.2,
+    duration: 1,
+    scrollTrigger: {
+      trigger: "#page6",
+      scroller: "#main",
+      start: "top 47%",
+      end: "top 46%",
+      scrub: 2,
+    }
+  });
+
+  gsap.from("#page6-1 .elem h4, #page6-1 .elem h3", {
+    y: 20,
+    opacity: 0,
+    stagger: 0.1,
+    duration: 0.4,
+    scrollTrigger: {
+      trigger: "#page6",
+      scroller: "#main",
+      start: "top 50%",
+      end: "top 50%",
+      scrub: 1,
+    }
+  });
+
+  gsap.from("#page6-3 h2", {
+    y: 30,
+    opacity: 0,
+    stagger: 0.3,
+    duration: 0.7,
+    scrollTrigger: {
+      trigger: "#page6",
+      scroller: "#main",
+      start: "top 10%",
+      end: "top 0%",
+      scrub: 2,
+    }
+  });
+}
+
+function page7Animation() {
+  gsap.from(".equipment-category", {
+    y: 150,
+    duration: 1,
+    stagger: 0.1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: "#page7",
+      scroller: "#main",
+      start: "top 70%",
+      end: "top 30%",
+      scrub: 1,
+      markers: false
+    },
+  });
+}
+
 function pageFooterAnimation() {
   gsap.from(".ftb h1 span", {
     y: -200,
@@ -326,7 +364,11 @@ function init() {
   page5Animation();
   swiperJS();
   page5Bottom();
+  page6Animation();
+  page7Animation();
   pageFooterAnimation();
 }
 
 window.addEventListener("load", init);
+
+
